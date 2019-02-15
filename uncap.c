@@ -517,6 +517,8 @@ enum action parseArguments(int argc, const char **argv)
         my.keymap[i] = (WORD) i;
 
     my.keymap[VK_CAPITAL] = VK_ESCAPE;
+    if (argc == 1)
+        my.keymap[VK_ESCAPE] = VK_CAPITAL;
 
     my.console = 0;
     my.debug = 0;
